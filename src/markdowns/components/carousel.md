@@ -3,9 +3,8 @@ templateKey: components
 title: Carousel
 path: Carousel
 ---
-# Carousel
 **Installation**
-First, install the reack slick carousel using npm
+First, install the reack slick carousel component using npm
 
 ```console
 npm install react-slick --save
@@ -31,6 +30,7 @@ import Carousel from "./components/shared/Carousel.tsx";
 ```
 
 **Usage**
+
 Carousel Types:
 - Hero
 - Cards
@@ -42,8 +42,8 @@ const allData = { type: <typeName>, data: <dataObjects> }
 <Carousel data={ allData } />
 ```
 Examples:
-**Hero**
 
+**Hero**
 ```js
 const data = [ 
     { id: 1, title: "Sample", description: "Sample" }, 
@@ -52,6 +52,7 @@ const data = [
 
 <Carousel data={ { type: "hero", data: data } }/>
 ```
+
 **Cards**
 ```js
 const data = [ 
@@ -82,13 +83,14 @@ import "slick-carousel/slick/slick-theme.scss";
 import Carousel from "./components/shared/Carousel.tsx";
 
 const Carousel = () => {
+    const data = [ 
+        { id: 1, title: "Sample", description: "Sample" }, 
+        { id: 2, title: "Sample2", description: "Sample2" }
+    ]; 
     return (
-        const data = [ 
-            { id: 1, title: "Sample", description: "Sample" }, 
-            { id: 2, title: "Sample2", description: "Sample2"}
-        ]; 
-        
-        <Carousel data={ { type: "hero", data: data } }/>
+        <>
+            <Carousel data={ { type: "hero", data: data } }/>
+        </>
     );
 }
 export default Carousel;
